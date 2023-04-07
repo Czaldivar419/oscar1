@@ -4,21 +4,26 @@ export const AboutUsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 65px;
+  padding: 30px 30px;
+  background-color: #f9f9f9; /* add a light gray background color */
+  transition: background-color 0.3s ease-in-out; /* add a transition effect */
+
   @media (min-width: 576px) {
     flex-direction: row;
     justify-content: space-between;
   }
+
   & > div {
     width: 100%;
     max-width: 800px;
     text-align: center;
+
     @media (min-width: 576px) {
       width: 50%;
       text-align: left;
     }
   }
-  `;
+`;
 
 export const AboutUsContent = styled.div`
   width: 90%;
@@ -26,26 +31,34 @@ export const AboutUsContent = styled.div`
 `;
 
 export const AboutUsTitle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 3rem; /* increase the font size */
   margin-bottom: 20px;
   text-align: center;
+
 `;
 
 export const AboutUsDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* increase the font size */
   text-align: center;
   margin-bottom: 40px;
-  padding: 30px;
+  padding: 20px;
+
+  @media (max-width: 576px) {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
 `;
 
 export const AboutUsImage = styled.img`
   display: block;
   margin: 0 auto 20px;
   max-width: 100%;
+  max-height: 70vh;
+  width: auto;
   border: 3px solid #ccc;
   border-radius: 1%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-`;
+  `;
 
 
 export const FooterContainer = styled.footer`
@@ -56,16 +69,24 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterText = styled.p`
-  margin: 0;
+  margin: 10px 0;
 `;
 
-export const FooterLink = styled.a`
+export const SocialMediaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+`;
+
+export const SocialMediaLink = styled.a`
+  margin: 0 10px;
   color: #fff;
-  text-decoration: none;
+
   &:hover {
-    text-decoration: underline;
+    color: #ccc;
   }
 `;
+
 
 export const HeaderContainer = styled.header`
   position: sticky;
@@ -79,18 +100,20 @@ export const HeaderContainer = styled.header`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 `;
 
-export const Logo = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
+export const Logo = styled.div`
+  display: flex;
+  align-items: center;
   margin-left: 50px;
   @media (max-width: 768px) {
     font-size: 1rem;
     text-align: center;
     margin: 0;
   }
+  img {
+    width: 100px;
+    height: auto;
+  }
 `;
-
 
 export const NavbarContainer = styled.nav`
   display: flex;
@@ -275,12 +298,15 @@ export const ServiceTitle = styled.h3`
 
 export const TestimonialsSection = styled.section`
   padding: 50px;
+  background-color: #f9f9f9;
 `;
 
 export const TestimonialsTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
 `;
 
 export const TestimonialsList = styled.ul`
@@ -295,6 +321,12 @@ export const TestimonialItem = styled.li`
   width: 33.33%;
   padding: 20px;
   box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
   @media (max-width: 768px) {
     width: 50%;
   }
@@ -305,6 +337,7 @@ export const TestimonialItem = styled.li`
 
 export const TestimonialText = styled.p`
   font-size: 1.2rem;
+  line-height: 1.5;
 `;
 
 export const TestimonialAuthor = styled.p`
@@ -394,3 +427,43 @@ export const Map = styled.iframe`
   width: 100%;
   height: 100%;
 `;
+
+export const VendorsContainer = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  place-items: center;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    /* Add responsive styles for smaller screens here */
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  place-items: center;
+
+  }
+`;
+
+export const VendorLogo = styled.a`
+  text-align: center;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const VendorTitle = styled.h2`
+  text-align: center;
+  font-size: 2.5rem;
+  `;

@@ -4,7 +4,7 @@ import { BannerSection, BannerTitle, BannerDescription, BannerButton } from "./s
 
 function Banner() {
     return (
-<BannerSection>
+<BannerSection id='Home'>
 <BannerTitle>Quality Flooring Services</BannerTitle>
 <BannerDescription>Transform your space with our expert flooring services</BannerDescription>
 <BannerButton>Get Started</BannerButton>
