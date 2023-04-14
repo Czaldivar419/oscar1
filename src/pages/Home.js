@@ -7,6 +7,8 @@ import About from '../components/About';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 import Vendors from '../components/Vendors';
+import ContactUs from '../components/Contact';
+import Map from '../components/Map';
 
 function Home () {
   return (
@@ -17,6 +19,8 @@ function Home () {
     <About/>
     <Vendors/>
     <Testimonials/>
+    <ContactUs/>
+    <Map/>
     <Footer/>
     </>
   );

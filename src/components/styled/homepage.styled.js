@@ -72,6 +72,14 @@ export const FooterText = styled.p`
   margin: 10px 0;
 `;
 
+export const AddressContainer = styled.div`
+  margin-top: 20px;
+`;
+
+export const AddressText = styled.p`
+  margin: 5px 0;
+`;
+
 export const SocialMediaContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -216,18 +224,6 @@ export const BannerTitle = styled.h2`
   text-align: center;
 `;
 
-export const BannerDescription = styled.p`
-  font-size: 1.2rem;
-  color: white;
-  color: white;
-	text-shadow: -1px 1px 2px #000,
-				  1px 2px 6px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
-  margin-bottom: 20px;
-  text-align: center;
-`;
-
 export const BannerButton = styled.button`
   font-size: 1.2rem;
   padding: 10px 20px;
@@ -264,6 +260,7 @@ export const ServicesTitle = styled.h2`
 export const ServicesList = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -271,7 +268,7 @@ export const ServicesList = styled.ul`
 
 export const ServiceItem = styled.li`
   width: 33.33%;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   @media (max-width: 768px) {
     width: 50%;
@@ -467,3 +464,109 @@ export const VendorTitle = styled.h2`
   text-align: center;
   font-size: 2.5rem;
   `;
+
+export const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+`;
+
+export const ContactHeader = styled.h2`
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+`;
+
+export const ContactUsForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+`;
+
+export const InputField = styled.input`
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const ContactTextArea = styled.textarea`
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const ContactSubmitButton = styled.button`
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #666;
+  }
+`;
+
+export const MessageSentContainer = styled.div`
+  background-color: #4BB543;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+`;
+
+export const ContactInfoContainer = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContactInfoText = styled.p`
+  margin-bottom: .1rem;
+  padding: 0rem 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+`;
+
+export const MapContainer = styled.div`
+  width: 40%;
+  height: 400px;
+  margin-left: 5%; /* change this value as needed for desired spacing */
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 400px;
+    margin-left: 0;
+  }
+`;

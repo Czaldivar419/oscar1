@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { NavbarContainer, Logo, Hamburger, TransparentButton, HamburgerContainer, NavLinks, ExitButton } from "./styled/homepage.styled";
+
+import { 
+  NavbarContainer, 
+  Logo, 
+  Hamburger, 
+  TransparentButton, 
+  HamburgerContainer, 
+  NavLinks, 
+  ExitButton
+   } from "./styled/homepage.styled";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +25,7 @@ function Header() {
     event.preventDefault();
     const offset = document.querySelector(target).offsetTop;
     window.scrollTo({
-      top: offset - 100, // adjust this value to change the scroll position
+      top: offset - 100,
       behavior: "smooth"
     });
     closeNav();
@@ -34,7 +43,7 @@ function Header() {
       </HamburgerContainer>
       <NavLinks isOpen={isOpen}>
         <li>
-          <a href="#Home" onClick={(event) => handleScrollTo(event, "#Home")}>Home</a>
+          <a href="#Home" onClick={(event) => handleScrollTo(event, "#Banner")}>Home</a>
         </li>
         <li>
           <a href="#Services" onClick={(event) => handleScrollTo(event, "#Services")}>Services</a>
@@ -44,6 +53,9 @@ function Header() {
         </li>
         <li>
           <a href="#Vendors" onClick={(event) => handleScrollTo(event, "#Vendors")}>Vendors</a>
+        </li>
+        <li>
+          <a href="#Contact" onClick={(event) => handleScrollTo(event, "#Contact")}>Contact</a>
         </li>
       </NavLinks>
     </NavbarContainer>

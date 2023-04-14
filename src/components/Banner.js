@@ -1,14 +1,24 @@
-import React from "react";
+import React from 'react';
+import { BannerTitle, BannerButton, BannerSection } from './styled/homepage.styled';
 
-import { BannerSection, BannerTitle, BannerDescription, BannerButton } from "./styled/homepage.styled";
+const Banner = () => {
+    const handleButtonClick = (event, target) => {
+        const targetElement = document.querySelector(target);
+        if (targetElement) {
+          const offset = targetElement.offsetTop;
+          window.scrollTo({
+            top: offset - 100,
+            behavior: "smooth"
+          });
+        }
+      };
 
-function Banner() {
-    return (
-<BannerSection id='Home'>
-<BannerTitle>Quality Flooring Services</BannerTitle>
-<BannerDescription>Transform your space with our expert flooring services</BannerDescription>
-<BannerButton>Get Started</BannerButton>
-</BannerSection>
-    );
-  }
-  export default Banner;
+  return (
+    <BannerSection id="Banner">
+      <BannerTitle>Transform Your Space</BannerTitle>
+      <BannerButton onClick={(event)=>handleButtonClick(event, "#Contact")}>Get Started</BannerButton>
+    </BannerSection>
+  );
+};
+
+export default Banner;
