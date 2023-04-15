@@ -1,5 +1,5 @@
-import React from 'react';
-import { GoogleMap, Marker } from '@react-google-maps/api';
+import React, { useState } from 'react';
+import { GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import { 
   AboutUsSection,
   AboutUsDescription,
@@ -11,6 +11,16 @@ const center = {
 };
 
 const Map = () => {
+  const [infoOpen, setInfoOpen] = useState(false);
+
+  const handleMarkerClick = () => {
+    setInfoOpen(true);
+  };
+
+  const handleInfoClose = () => {
+    setInfoOpen(false);
+  };
+
   return (
     <AboutUsSection id="info">
       <div>
@@ -25,7 +35,17 @@ const Map = () => {
           zoom={11}
           apiKey="YOUR_API_KEY"
         >
-          <Marker position={center} />
+          <Marker position={center} onClick={handleMarkerClick}>
+            {infoOpen && (
+              <InfoWindow onCloseClick={handleInfoClose}>
+                <div>
+                  <h3>Rialto Flooring</h3>
+                  <p>128 S Riverside Ave. Rialto, CA</p>
+                  <p>(909) 258-2905</p>
+                </div>
+              </InfoWindow>
+            )}
+          </Marker>
         </GoogleMap>
       </div>
     </AboutUsSection>

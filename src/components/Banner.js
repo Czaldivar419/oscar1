@@ -15,7 +15,7 @@ const Banner = () => {
 
   return (
     <BannerSection id="Banner">
-      <BannerTitle>Transform Your Space</BannerTitle>
+      <BannerTitle>Welcome to Rialto Flooring</BannerTitle>
       <BannerButton onClick={(event)=>handleButtonClick(event, "#Contact")}>Get Started</BannerButton>
     </BannerSection>
   );

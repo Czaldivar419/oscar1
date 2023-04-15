@@ -169,11 +169,14 @@ export const NavLinks = styled.ul`
     width: 100%;
     height: calc(100vh - 80px);
     background-color: #fff;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
     margin-top: .5rem;
   }
   li:not(:last-child) {
-    margin-right: 2rem;
+    text-align: center;
+  }
+  li:last-child {
+    text-align: center;
   }
   a {
     text-decoration: none;
@@ -222,6 +225,10 @@ export const BannerTitle = styled.h2`
 				  -1px -1px 0 #000;
   margin-bottom: 20px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 1px;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.75);
 `;
 
 export const BannerButton = styled.button`
@@ -259,6 +266,7 @@ export const ServicesTitle = styled.h2`
 
 export const ServicesList = styled.ul`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   list-style: none;
@@ -267,7 +275,7 @@ export const ServicesList = styled.ul`
 `;
 
 export const ServiceItem = styled.li`
-  width: 33.33%;
+  width: 33%;
   padding: 10px;
   box-sizing: border-box;
   @media (max-width: 768px) {
